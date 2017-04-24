@@ -2,32 +2,89 @@
 <html>
 <head>
 <title>Scheduling</title>
+<style>
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 500px;
+    height: 350px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    /*width: 100%;*/
+    /*height: auto;*/
+    max-height: 300px;
+    max-width: 500px;
+
+    display:block;
+    margin:auto;
+    text-align:center;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+</style>
 </head>
 <body>
 
-<p>Original</p>
-<img src="pics/original.png" alt="Original" width="60%" style="display:block;margin:auto;text-align:center;">
-<br><br><br>
-<p>AI</p>
-<img src="pics/ai.png" alt="AI" width="60%" style="display:block;margin:auto;text-align:center;">
-<br><br><br>
-<p>DBs</p>
-<img src="pics/DBs.png" alt="Databases" width="60%" style="display:block;margin:auto;text-align:center;">
-<br><br><br>
-<p>Engineering</p>
-<img src="pics/engineering.png" alt="Engineering" width="60%" style="display:block;margin:auto;text-align:center;">
-<br><br><br>
-<p>Graphics</p>
-<img src="pics/graphics.png" alt="Graphics" width="60%" style="display:block;margin:auto;text-align:center;">
-<br><br><br>
-<p>ICA</p>
-<img src="pics/ica.png" alt="ICA" width="60%" style="display:block;margin:auto;text-align:center;">
-<br><br><br>
-<p>Networking</p>
-<img src="pics/network.png" alt="Networking" width="60%" style="display:block;margin:auto;text-align:center;">
-<br><br><br>
-<p>Systems</p>
-<img src="pics/systems.png" alt="Systems" width="60%" style="display:block;margin:auto;text-align:center;">
+<div class="gallery">
+  <a target="_blank" href="pics/original.png">
+    <img src="pics/original.png" alt="Original">
+  </a>
+  <div class="desc">Original</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="pics/ai.png">
+    <img src="pics/ai.png" alt="AI">
+  </a>
+  <div class="desc">AI</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="pics/DBs.png">
+    <img src="pics/DBs.png" alt="DBs">
+  </a>
+  <div class="desc">DBs</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="pics/engineering.png">
+    <img src="pics/engineering.png" alt="Engineering">
+  </a>
+  <div class="desc">Engineering</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="pics/graphics.png">
+    <img src="pics/graphics.png" alt="Graphics">
+  </a>
+  <div class="desc">Graphics</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="pics/ica.png">
+    <img src="pics/ica.png" alt="ICA">
+  </a>
+  <div class="desc">ICA</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="pics/network.png">
+    <img src="pics/network.png" alt="Networking">
+  </a>
+  <div class="desc">Networking</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="pics/systems.png">
+    <img src="pics/systems.png" alt="Systems">
+  </a>
+  <div class="desc">Systems</div>
+</div>
 
 </body>
 </html>
