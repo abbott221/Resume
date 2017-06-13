@@ -26,10 +26,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <!-- custom -->
+  <!-- <script src="scheduling/course-list.js"></script> -->
   <script src="scheduling/scheduling.js"></script>
   <link rel="stylesheet" type="text/css" href="scheduling/scheduling.css">
 </head>
-<body>
+<body ng-controller="SchedulerController as scheduler">
   <div class="container-fluid">
     <div class="row">
       <h1>OSU CSE Scheduling</h1>
@@ -55,9 +56,14 @@
       <p>This project began as a much smaller scale drawing in 2014 or 2015 that I had created to ensure that I could take all the course that I wanted to before graduation.  Since others also found the drawing helpful, it gradually increased in scale, became digital, and was eventually just put up on this website.</p>
     </div>
 
-    <!-- <div class="row">
-      <div ng-include="'scheduling/scheduling-table.html'"></div>
-    </div> -->
+    <div class="row">
+      <!-- <div class="col-sm-1"></div> -->
+      <!-- <div class="col-xs-12 col-sm-10"> -->
+        <div ng-include="'scheduling/scheduling-table.html'"></div>
+      <!-- </div> -->
+      <!-- <div class="col-sm-1"></div> -->
+    </div>
+
   </div>
 </body>
 </html>

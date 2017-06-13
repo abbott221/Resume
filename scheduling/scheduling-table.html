@@ -1,7 +1,42 @@
-<!-- This is possibly a task for another day -->
 <h2>Course Listing</h2>
 
-<table>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Course Number</th>
+      <th>Title</th>
+      <!-- <th class="hidden-xs">Description</th> -->
+      <th>Credit Hours</th>
+      <th>Focus</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr ng-repeat="course in scheduler.courses">
+      <td>
+        <div ng-if="course.link"><a ng-href="http://coe-portal.cse.ohio-state.edu/pdf-exports/CSE/CSE-{{course.number}}.pdf">{{course.department}} {{course.number}}</a></div>
+        <div ng-if="!course.link">{{course.department}} {{course.number}}</div>
+      </td>
+      <td>{{course.title}}</td>
+      <!-- <td class="hidden-xs">{{course.desc}}</td> -->
+      <td>{{course.hours}}</td>
+      <td>
+        <div ng-if="course.focuses.length == 0"><a ng-href="#!original#Main_Picture">None</a></div>
+        <div ng-if="course.focuses.length > 0">
+          <div ng-repeat="focus in course.focuses">
+            <a ng-href="#!{{focus}}#{{focus}}">{{focus}} </a>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+<br>
+
+<!-- <table>
   <tr>
     <th>Course Number</th>
     <th>Title</th>
@@ -12,34 +47,6 @@
   <tr>
     <td><a href="http://coe-portal.cse.ohio-state.edu/pdf-exports/CSE/CSE-2221.pdf">CSE 2221</a></td>
     <td>Software I: Software Components</td>
-    <td>4.0</td>
-    <td>N/A</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>CSE 2231</td>
-    <td>Software II: Software Development and Design</td>
-    <td>4.0</td>
-    <td>N/A</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>CSE 2321</td>
-    <td>Foundations I: Discrete Structures</td>
-    <td>3.0</td>
-    <td>N/A</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>CSE 2331</td>
-    <td>Foundations II: Data Structures and Algorithms</td>
-    <td>3.0</td>
-    <td>N/A</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>CSE 2421</td>
-    <td>Systems I: Introduction to Low-Level Programming and Computer Organization</td>
     <td>4.0</td>
     <td>N/A</td>
     <td>Yes</td>
