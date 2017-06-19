@@ -526,4 +526,17 @@ app
     .otherwise({
         redirectTo : "/scheduling"
     });
+})
+.run(function($rootScope, $location, $window){
+    $rootScope.$on('$routeChangeSuccess', function(event) {
+        // console.log($location.url());
+        ga('set', $location.url(), 'auto');
+        ga('send', 'pageview');
+    });
+    // $rootScope.$on('$viewContentLoaded', function(event) {
+    //     // $window.ga('send', 'pageview', { page: $location.url() });
+    //     console.log('CONTENT LOADED EVENT');
+    //     console.log($location.url());
+    //     console.log($location.path());
+    // });
 });
