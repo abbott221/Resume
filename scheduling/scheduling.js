@@ -530,7 +530,7 @@ app
 .run(function($rootScope, $location, $window){
     $rootScope.$on('$routeChangeSuccess', function(event) {
         // console.log($location.url());
-        ga('set', $location.url(), 'auto');
+        ga('set', 'page', $location.url());
         ga('send', 'pageview');
     });
     // $rootScope.$on('$viewContentLoaded', function(event) {
