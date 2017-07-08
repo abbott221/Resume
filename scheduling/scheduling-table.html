@@ -1,61 +1,50 @@
-<h2>Course Listing</h2>
+<div style="background-color: #a6a6a6" class="row">
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Course Number</th>
-      <th>Title</th>
-      <!-- <th class="hidden-xs">Description</th> -->
-      <th>Credit Hours</th>
-      <th>Focus</th>
-    </tr>
-  </thead>
-  <tbody>
+  <!-- MARGINS -->
+  <div class="col-xs-1"></div>
+  <div class="col-xs-10">
 
-    <tr ng-repeat="course in scheduler.courses">
-      <td>
-        <div ng-if="course.link"><a ng-href="http://coe-portal.cse.ohio-state.edu/pdf-exports/CSE/CSE-{{course.number}}.pdf">{{course.department}} {{course.number}}</a></div>
-        <div ng-if="!course.link">{{course.department}} {{course.number}}</div>
-      </td>
-      <td>{{course.title}}</td>
-      <!-- <td class="hidden-xs">{{course.desc}}</td> -->
-      <td>{{course.hours}}</td>
-      <td>
-        <div ng-if="course.focuses.length == 0"><a ng-click="scheduler.navToPicFromTable(course)" ng-href="#!original#graphs">None</a></div>
-        <div ng-if="course.focuses.length > 0">
-          <div ng-repeat="focus in course.focuses">
-            <a ng-click="scheduler.navToPicFromTable(course)" ng-href="#!{{focus}}#graphs">{{focus}} </a>
+  <h2 style="color: #fff;">Course Listing</h2>
+
+  <table style="background-color: #fff" class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Course Number</th>
+        <th>Title</th>
+        <!-- <th class="hidden-xs">Description</th> -->
+        <th>Credit Hours</th>
+        <th>Focus</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr ng-repeat="course in scheduler.courses">
+        <td>
+          <div ng-if="course.link"><a ng-href="http://coe-portal.cse.ohio-state.edu/pdf-exports/CSE/CSE-{{course.number}}.pdf">{{course.department}} {{course.number}}</a></div>
+          <div ng-if="!course.link">{{course.department}} {{course.number}}</div>
+        </td>
+        <td>{{course.title}}</td>
+        <!-- <td class="hidden-xs">{{course.desc}}</td> -->
+        <td>{{course.hours}}</td>
+        <td>
+          <div ng-if="course.focuses.length == 0"><a ng-click="scheduler.navToPicFromTable(course)" ng-href="#!original#graphs">None</a></div>
+          <div ng-if="course.focuses.length > 0">
+            <div ng-repeat="focus in course.focuses">
+              <a ng-click="scheduler.navToPicFromTable(course)" ng-href="#!{{focus}}#graphs">{{focus}} </a>
+            </div>
           </div>
-        </div>
-      </td>
-    </tr>
+        </td>
+      </tr>
 
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
-<br>
-<br>
+  <br>
+  <br>
 
-<!-- <table>
-  <tr>
-    <th>Course Number</th>
-    <th>Title</th>
-    <th>Credit Hours</th>
-    <th>Specialization</th>
-    <th>Included in My Graph</th>
-  </tr>
-  <tr>
-    <td><a href="http://coe-portal.cse.ohio-state.edu/pdf-exports/CSE/CSE-2221.pdf">CSE 2221</a></td>
-    <td>Software I: Software Components</td>
-    <td>4.0</td>
-    <td>N/A</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>CSE 2231</td>
-    <td>Software II: Software Development and Design</td>
-    <td>4.0</td>
-    <td>N/A</td>
-    <td>Yes</td>
-  </tr>
-</table>
+  <!-- MARGINS -->
+  </div>
+  <div class="col-xs-1"></div>
+
+</div>

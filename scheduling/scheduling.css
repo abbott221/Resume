@@ -1,4 +1,17 @@
 
+h1 {
+  color: #fff;
+}
+h2 {
+  color: #fff;
+}
+
+#pic-layer {
+    background-image: url('https://i.imgur.com/eUBKX0K.jpg');
+    background-size: cover;
+}
+
+
 div.force-break {
     width: 100%;
     display: block;
@@ -79,6 +92,7 @@ div.bs-sub-pic {
     /*float: left;*/
     /*width: 125px;*/
     /*height: 90px;*/
+    background-color: #fff;
 }
 div.bs-sub-pic:hover {
     border: 1px solid #777;

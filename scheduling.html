@@ -44,44 +44,31 @@
 
     <!-- margins -->
     <div class="row">
-    <div class="col-xs-1"></div>
-    <div class="col-xs-10">
+    <!-- <div class="col-xs-1"></div>
+    <div class="col-xs-10"> -->
 
-    <div class="row">
-      <h1>OSU CSE Scheduling</h1>
-      <p>The following page is hopefully a helpful resource for scheduling and planning out upcoming semesters in Ohio State University's Computer Science and Engineering program.</p>
+    <div ng-include="'scheduling/sections/page-top.html'"></div>
 
-      <h2>PDF / Hand-out</h2>
-      <p><a href="pics/scheduling.pdf">View PDF in Browser</a></p>
-      <p><a href="pics/scheduling.pdf" download="scheduling.pdf">Download the PDF</a></p>
 
-      <h2 id="graphs">Pre-requisite Graphs</h2>
-      <p>Click or tap on an image to expand it</p>
-    </div>
 
-    <br>
+    <div ng-include="'scheduling/sections/graphs.html'"></div>
 
-    <div class="row">
-      <div ng-view></div>
-    </div>
 
-    <div class="row">
-      <h2>About The Graphs</h2>
-      <p>The above images are directed acyclic graphs of the pre-requisites for the majority of courses in the CSE department and requirements for graduation.  This does not contain all of the CSE department's course offerings, but seemed more comprehensive than any other available resources that I could find.</p>
-      <p>This project began as a much smaller scale drawing in 2014 or 2015 that I had created to ensure that I could take all the course that I wanted to before graduation.  Since others also found the drawing helpful, it gradually increased in scale, became digital, and was eventually just put up on this website.</p>
-    </div>
 
-    <div class="row">
+    <div ng-include="'scheduling/sections/about.html'"></div>
+
+
+    <!-- <div class="row"> -->
       <!-- <div class="col-sm-1"></div> -->
       <!-- <div class="col-xs-12 col-sm-10"> -->
         <div ng-include="'scheduling/scheduling-table.html'"></div>
       <!-- </div> -->
       <!-- <div class="col-sm-1"></div> -->
-    </div>
+    <!-- </div> -->
 
     <!-- margins -->
-    </div> <!-- and col-xs-10 -->
-    <div class="col-xs-1"></div>
+    <!-- </div>
+    <div class="col-xs-1"></div> -->
     </div> <!-- end row -->
 
   </div>
