@@ -494,11 +494,22 @@ app
     scheduler.navigateToPic = function() {
         document.getElementById('graphs').scrollIntoView();
     };
+
     scheduler.navToPicFromTable = function(course) {
         document.getElementById('graphs').scrollIntoView();
 
         var courseString = course.department + ' ' + course.number;
         ga('send', 'event', 'Table', 'View Focus', courseString);
+    };
+    scheduler.navToPicFromSubPic = function(focusString) {
+        document.getElementById('graphs').scrollIntoView();
+
+        ga('send', 'event', 'Sub Pic', 'View Focus', focusString);
+    };
+    scheduler.navToPicFromMain = function(focusString) {
+        document.getElementById('graphs').scrollIntoView();
+
+        ga('send', 'event', 'Main Page', 'View Focus', focusString);
     };
 })
 .config(function($routeProvider) {
