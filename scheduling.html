@@ -39,38 +39,19 @@
 </head>
 <body ng-controller="SchedulerController as scheduler">
 
+  <!-- Due to some odd width sizing behaviour, the image section has its own container -->
+  <div ng-include="'scheduling/sections/page-top.html'"></div>
+
   <!-- REGULAR CONTAINERS DON'T DO WHAT YOU THINK THEY DO -->
   <div class="container-fluid">
 
-    <!-- margins -->
-    <div class="row">
-    <!-- <div class="col-xs-1"></div>
-    <div class="col-xs-10"> -->
-
-    <div ng-include="'scheduling/sections/page-top.html'"></div>
-
-
-
     <div ng-include="'scheduling/sections/graphs.html'"></div>
-
-
 
     <div ng-include="'scheduling/sections/about.html'"></div>
 
-
-    <!-- <div class="row"> -->
-      <!-- <div class="col-sm-1"></div> -->
-      <!-- <div class="col-xs-12 col-sm-10"> -->
-        <div ng-include="'scheduling/scheduling-table.html'"></div>
-      <!-- </div> -->
-      <!-- <div class="col-sm-1"></div> -->
-    <!-- </div> -->
-
-    <!-- margins -->
-    <!-- </div>
-    <div class="col-xs-1"></div> -->
-    </div> <!-- end row -->
+    <div ng-include="'scheduling/scheduling-table.html'"></div>
 
   </div>
+
 </body>
 </html>
