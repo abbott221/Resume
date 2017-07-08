@@ -38,7 +38,15 @@
   <link rel="stylesheet" type="text/css" href="scheduling/scheduling.css">
 </head>
 <body ng-controller="SchedulerController as scheduler">
-  <div class="container">
+
+  <!-- REGULAR CONTAINERS DON'T DO WHAT YOU THINK THEY DO -->
+  <div class="container-fluid">
+
+    <!-- margins -->
+    <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
+
     <div class="row">
       <h1>OSU CSE Scheduling</h1>
       <p>The following page is hopefully a helpful resource for scheduling and planning out upcoming semesters in Ohio State University's Computer Science and Engineering program.</p>
@@ -70,6 +78,11 @@
       <!-- </div> -->
       <!-- <div class="col-sm-1"></div> -->
     </div>
+
+    <!-- margins -->
+    </div> <!-- and col-xs-10 -->
+    <div class="col-xs-1"></div>
+    </div> <!-- end row -->
 
   </div>
 </body>
