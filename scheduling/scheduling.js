@@ -490,6 +490,10 @@ app
     var scheduler = this;
     scheduler.viewingFocus = false;
     scheduler.courses = courseListValue;
+
+    scheduler.navigateToPic = function() {
+        document.getElementById('graphs').scrollIntoView();
+    }
 })
 .config(function($routeProvider) {
     $routeProvider

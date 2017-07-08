@@ -21,10 +21,10 @@
       <!-- <td class="hidden-xs">{{course.desc}}</td> -->
       <td>{{course.hours}}</td>
       <td>
-        <div ng-if="course.focuses.length == 0"><a ng-href="#!original#Main_Picture">None</a></div>
+        <div ng-if="course.focuses.length == 0"><a ng-click="scheduler.navigateToPic()" ng-href="#!original#Main_Picture">None</a></div>
         <div ng-if="course.focuses.length > 0">
           <div ng-repeat="focus in course.focuses">
-            <a ng-href="#!{{focus}}#{{focus}}">{{focus}} </a>
+            <a ng-click="scheduler.navigateToPic()" ng-href="#!{{focus}}#{{focus}}">{{focus}} </a>
           </div>
         </div>
       </td>
