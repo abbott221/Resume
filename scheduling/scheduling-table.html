@@ -28,10 +28,10 @@
         <!-- <td class="hidden-xs">{{course.desc}}</td> -->
         <td>{{course.hours}}</td>
         <td>
-          <div ng-if="course.focuses.length == 0"><a ng-click="scheduler.navToPicFromTable(course)" ng-href="#!original#graphs">None</a></div>
+          <div ng-if="course.focuses.length == 0"><a ng-click="scheduler.navToPicFromTable(course, 'Original')" ng-href="#!original#graphs">None</a></div>
           <div ng-if="course.focuses.length > 0">
             <div ng-repeat="focus in course.focuses">
-              <a ng-click="scheduler.navToPicFromTable(course)" ng-href="#!{{focus}}#graphs">{{focus}} </a>
+              <a ng-click="scheduler.navToPicFromTable(course, focus)" ng-href="#!{{focus}}#graphs">{{focus}} </a>
             </div>
           </div>
         </td>

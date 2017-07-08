@@ -495,21 +495,29 @@ app
         document.getElementById('graphs').scrollIntoView();
     };
 
-    scheduler.navToPicFromTable = function(course) {
+    scheduler.navToPicFromTable = function(course, focusString) {
         document.getElementById('graphs').scrollIntoView();
+        var actionString = "View Focus - " + focusString;
+        // console.log(actionString);
+        // console.log(focusString);
+        // console.log(course);
 
         var courseString = course.department + ' ' + course.number;
-        ga('send', 'event', 'Table', 'View Focus', courseString);
+        ga('send', 'event', 'Table', actionString, courseString);
     };
     scheduler.navToPicFromSubPic = function(focusString) {
         document.getElementById('graphs').scrollIntoView();
+        var actionString = "View Focus - " + focusString;
+        // console.log(actionString);
 
-        ga('send', 'event', 'Sub Pic', 'View Focus', focusString);
+        ga('send', 'event', 'Sub Pic', actionString);
     };
     scheduler.navToPicFromMain = function(focusString) {
         document.getElementById('graphs').scrollIntoView();
+        var actionString = "View Focus - " + focusString;
+        // console.log(actionString);
 
-        ga('send', 'event', 'Main Page', 'View Focus', focusString);
+        ga('send', 'event', 'Main Page', actionString);
     };
 })
 .config(function($routeProvider) {
