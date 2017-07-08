@@ -493,7 +493,13 @@ app
 
     scheduler.navigateToPic = function() {
         document.getElementById('graphs').scrollIntoView();
-    }
+    };
+    scheduler.navToPicFromTable = function(course) {
+        document.getElementById('graphs').scrollIntoView();
+
+        var courseString = course.department + ' ' + course.number;
+        ga('send', 'event', 'Table', 'View Focus', courseString);
+    };
 })
 .config(function($routeProvider) {
     $routeProvider
